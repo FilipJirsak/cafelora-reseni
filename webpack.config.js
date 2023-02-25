@@ -35,7 +35,7 @@ module.exports = {
       ],
     }),
     new webpack.DefinePlugin({
-      API_URL: JSON.stringify(process.env.API_URL ?? 'https://apps.kodim.cz/daweb/cafelora/api'),
+      API_URL: JSON.stringify(process.env.API_URL ?? 'https://cafelora.kodim.app/api'),
     }),
   ],
 };
