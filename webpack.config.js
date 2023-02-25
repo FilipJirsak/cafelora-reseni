@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    assetModuleFilename: 'img/[name]-[hash:6].[ext]'
+    assetModuleFilename: 'img/[name]-[hash:6][ext]'
   },
   devServer: {
     historyApiFallback: true,
