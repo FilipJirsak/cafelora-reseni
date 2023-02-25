@@ -27,11 +27,11 @@ export const Drink = (props) => {
   );
   
   element.querySelector('.order-btn').addEventListener('click', () => {
-    fetch(`https://apps.kodim.cz/daweb/cafelora/api/me/drinks/${id}`, {
+    fetch(`${API_URL}/me/drinks/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Email podlouckymartin@gmail.com',
+        'Authorization': 'Email unicorn.farts@example.com',
       },
       body: JSON.stringify({ ordered: !ordered }),
     })

@@ -1,5 +1,8 @@
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
+
+require('dotenv').config();
 
 module.exports = {
   mode: 'development',
@@ -30,6 +33,9 @@ module.exports = {
       patterns: [
         { from: 'public', to: '', noErrorOnMissing: true },
       ],
+    }),
+    new webpack.DefinePlugin({
+      API_URL: process.env.API_URL ?? JSON.stringify('https://apps.kodim.cz/daweb/cafelora/api'),
     }),
   ],
 };

@@ -15,10 +15,10 @@ export const Order = (props = {}) => {
   `;
 
   if (items === undefined) {
-    fetch('https://apps.kodim.cz/daweb/cafelora/api/me/drinks', {
+    fetch(`${API_URL}/api/me/drinks`, {
       method: 'GET',
       headers: {
-        'Authorization': 'Email podlouckymartin@gmail.com',
+        'Authorization': 'Email unicorn.farts@example.com',
       },
     })
       .then((response) => response.json())
