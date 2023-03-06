@@ -4,8 +4,8 @@
   "description": "Starter kit for vanilla JavaScript project",
   "main": "index.js",
   "scripts": {
-    "build": "npx webpack --mode=production",
-    "start": "npx webpack serve --open"
+    "build": "webpack --mode=production",
+    "start": "webpack serve --open"
   },
   "author": "",
   "license": "ISC",
