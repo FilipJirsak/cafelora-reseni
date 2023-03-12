@@ -23,7 +23,7 @@ export const Order = (props = {}) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        const drinks = data.results.filter((drink) => drink.ordered);
+        const drinks = data.result.filter((drink) => drink.ordered);
         element.replaceWith(Order({ items: drinks }));
       });
   } else if (items.length === 0) {

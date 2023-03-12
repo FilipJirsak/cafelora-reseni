@@ -37,7 +37,7 @@ export const Drink = (props) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        element.replaceWith(Drink(data.results));
+        element.replaceWith(Drink(data.result));
       });
   });
 

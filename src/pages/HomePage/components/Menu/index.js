@@ -29,7 +29,7 @@ export const Menu = (props = {}) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        element.replaceWith(Menu({ drinks: data.results }));
+        element.replaceWith(Menu({ drinks: data.result }));
       });
   } else {
     element.querySelector('.drinks-list').append(
