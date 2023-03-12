@@ -31,7 +31,7 @@ export const Drink = (props) => {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Email unicorn.farts@example.com',
+        'Authorization': `Bearer ${APP_TOKEN}`,
       },
       body: JSON.stringify({ ordered: !ordered }),
     })

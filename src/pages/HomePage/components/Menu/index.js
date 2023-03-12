@@ -24,7 +24,7 @@ export const Menu = (props = {}) => {
     fetch(`${API_URL}/me/drinks`, {
       method: 'GET',
       headers: {
-        'Authorization': 'Email unicorn.farts@example.com',
+        'Authorization': `Bearer ${APP_TOKEN}`,
       },
     })
       .then((response) => response.json())
