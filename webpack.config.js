@@ -42,5 +42,8 @@ module.exports = {
     new CopyPlugin({
       patterns: [{ from: "public", to: "", noErrorOnMissing: true }],
     }),
+    new webpack.DefinePlugin({
+      BASE_PATH: publicPath,
+    }),
   ],
 };

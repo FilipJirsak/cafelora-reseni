@@ -4,8 +4,7 @@ import "./style.css";
 
 const { pathname } = window.location;
 
-console.log("process", process);
-console.log("env", env);
+console.log("BASE_PATH", BASE_PATH);
 
 if (pathname === "/") {
   document.querySelector("#app").append(HomePage());
