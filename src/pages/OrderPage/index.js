@@ -7,7 +7,7 @@ export const OrderPage = () => {
   element.classList.add('page');
   element.append(
     Header({ showMenu: false }),
-    Order(),
+    Order({ items: 'loading' }),
     Footer(),
   );
 

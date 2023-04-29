@@ -27,11 +27,11 @@ export const Drink = (props) => {
   );
   
   element.querySelector('.order-btn').addEventListener('click', () => {
-    fetch(`${API_URL}/me/drinks/${id}`, {
+    fetch(`https://cafelora.kodim.app/api/me/drinks/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${APP_TOKEN}`,
+        'Authorization': `Bearer ${localStorage.getItem('token')}`,
       },
       body: JSON.stringify({ ordered: !ordered }),
     })

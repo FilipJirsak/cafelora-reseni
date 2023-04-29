@@ -1,7 +1,7 @@
 import { Drink } from './components/Drink';
 import './style.css';
 
-export const Menu = (props = {}) => {
+export const Menu = (props) => {
   const { drinks } = props;
 
   const element = document.createElement('section');
@@ -20,11 +20,11 @@ export const Menu = (props = {}) => {
     </div>
   `;
 
-  if (drinks === undefined) {
-    fetch(`${API_URL}/me/drinks`, {
+  if (drinks === 'loading') {
+    fetch('https://cafelora.kodim.app/api/me/drinks', {
       method: 'GET',
       headers: {
-        'Authorization': `Bearer ${APP_TOKEN}`,
+        'Authorization': `Bearer ${localStorage.getItem('token')}`,
       },
     })
       .then((response) => response.json())

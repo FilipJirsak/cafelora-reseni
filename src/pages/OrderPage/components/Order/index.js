@@ -1,7 +1,7 @@
 import { OrderItem } from '../OrderItem';
 import './style.css';
 
-export const Order = (props = {}) => {
+export const Order = (props) => {
   const { items } = props;
 
   const element = document.createElement('main');
@@ -14,11 +14,11 @@ export const Order = (props = {}) => {
     </div>
   `;
 
-  if (items === undefined) {
-    fetch(`${API_URL}/me/drinks`, {
+  if (items === 'loading') {
+    fetch('https://cafelora.kodim.app/api/me/drinks', {
       method: 'GET',
       headers: {
-        'Authorization': `Bearer ${APP_TOKEN}`,
+        'Authorization': `Bearer ${localStorage.getItem('token')}`,
       },
     })
       .then((response) => response.json())
