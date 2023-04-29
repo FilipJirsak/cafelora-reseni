@@ -4,8 +4,8 @@ const webpack = require("webpack");
 
 const publicPath =
   process && process.env && process.env.GITHUB_REPOSITORY
-    ? "/" + process.env.GITHUB_REPOSITORY.split("/")[1] + "/"
-    : "/";
+    ? "/" + process.env.GITHUB_REPOSITORY.split("/")[1]
+    : "";
 
 module.exports = {
   mode: "development",
@@ -13,7 +13,7 @@ module.exports = {
   devtool: "eval-source-map",
   output: {
     filename: "bundle-[contenthash:6].js",
-    publicPath: publicPath,
+    publicPath: publicPath + "/",
     clean: true,
   },
   devServer: {
