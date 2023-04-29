@@ -1,8 +1,8 @@
-import './style.css';
+import "./style.css";
 
 export const Contact = () => {
-  const element = document.createElement('section');
-  element.id = 'contact';
+  const element = document.createElement("section");
+  element.id = "contact";
   element.innerHTML = `
     <div class="container">
       <h2>Kde nás najdete</h2>
@@ -20,10 +20,10 @@ export const Contact = () => {
           <tr><td>Sobota</td><td>9:00 - 02:00</td></tr>
           <tr><td>Neděle</td><td>9:00 - 02:00</td></tr>
         </table>
-        <img class="contact__map" src="/img/map.png" />
+        <img class="contact__map" src="img/map.png" />
       </div>
     </div>
   `;
 
   return element;
-}
+};
