@@ -1,6 +1,10 @@
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+console.log("process", process);
+console.log("env", env);
+console.log("process.env", process.env);
+
 module.exports = {
   mode: "development",
   entry: "./src/index.js",
