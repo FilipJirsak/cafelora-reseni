@@ -15,7 +15,7 @@ export const Menu = (props) => {
       </p>
       <div class="drinks-list"></div>
       <div class="order-detail">
-        <a href="BASE_PATH/objednavka">Detail objednávky</a>
+        <a href="objednavka">Detail objednávky</a>
       </div>
     </div>
   `;
