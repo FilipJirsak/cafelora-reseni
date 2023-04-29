@@ -1,7 +1,10 @@
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const publicPath = process && process.env && process.env.GITHUB_REPOSITORY ? "/"+process.env.GITHUB_REPOSITORY.split(/)[1] + "/" : "/"
+const publicPath =
+  process && process.env && process.env.GITHUB_REPOSITORY
+    ? "/" + process.env.GITHUB_REPOSITORY.split("/")[1] + "/"
+    : "/";
 
 module.exports = {
   mode: "development",
