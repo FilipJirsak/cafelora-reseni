@@ -7,7 +7,7 @@ module.exports = {
   devtool: "eval-source-map",
   output: {
     filename: "bundle-[contenthash:6].js",
-    publicPath: "/cafelora-reseni",
+    publicPath: "/cafelora-reseni/",
     clean: true,
   },
   devServer: {
@@ -25,7 +25,7 @@ module.exports = {
         test: /\.(png|jpe?g|svg|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "/img/[name]-[contenthash:6][ext]",
+          filename: "img/[name]-[contenthash:6][ext]",
         },
       },
     ],
