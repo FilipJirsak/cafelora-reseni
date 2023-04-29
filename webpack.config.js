@@ -1,9 +1,7 @@
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-console.log("process", process);
-console.log("env", env);
-console.log("process.env", process.env);
+const publicPath = process && process.env && process.env.GITHUB_REPOSITORY ? "/"+process.env.GITHUB_REPOSITORY.split(/)[1] + "/" : "/"
 
 module.exports = {
   mode: "development",
@@ -11,7 +9,7 @@ module.exports = {
   devtool: "eval-source-map",
   output: {
     filename: "bundle-[contenthash:6].js",
-    publicPath: "/cafelora-reseni/",
+    publicPath: publicPath,
     clean: true,
   },
   devServer: {
